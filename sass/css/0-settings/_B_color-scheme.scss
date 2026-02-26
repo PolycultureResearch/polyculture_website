@@ -1,0 +1,37 @@
+/* Polyculture Research Color Scheme */
+
+// Primary palette
+$primary-color: #FF2E7E;        // Fuchsia - CTAs, highlights
+$secondary-color: #2D9CDB;      // Electric Blue - links, data viz
+$slate: #3D4F5F;                // Slate - headers, emphasis
+
+// Neutrals
+$white: #fff;
+$dark: #1E1E1E;                 // Near black - body text
+$gray: #d9d9d9;
+$light-gray: #E8EAED;           // Light slate - cards, borders
+$blue-gray: #E8EAED;
+
+// Backgrounds
+$background-color: #FAF7F2;     // Warm cream
+$background-color-alt: $white;
+
+// Text
+$text-color: $dark;
+$heading-font-color: $slate;
+
+// Links
+$link-color: $secondary-color;
+$link-color-hover: darken($secondary-color, 10%);
+
+// Buttons
+$button-color: $white;
+$button-background-color: $primary-color;
+$button-background-hover: darken($primary-color, 8%);
+
+// Borders and misc
+$border-color: $light-gray;
+$hr-color: $light-gray;
+$tr-color: #f8f8f8;
+
+$syntax-highlighting-background: #f8f8f8;

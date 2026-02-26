@@ -1,0 +1,116 @@
+/* Polyculture Research Custom Styles */
+
+// Override footer to use slate background instead of gradient
+.footer {
+  background: $slate;
+
+  .social__link {
+    color: $slate;
+
+    &:hover {
+      color: $slate;
+    }
+  }
+}
+
+// Make headings use slate color
+h1, h2, h3, h4, h5, h6 {
+  color: $slate;
+}
+
+// Logo styling
+.logo__link {
+  color: $slate;
+
+  &:hover {
+    color: $slate;
+  }
+}
+
+// Navigation active states
+.nav__link {
+  &.active-link::after {
+    background-color: $primary-color;
+  }
+}
+
+// Hero section refinements
+.hero {
+  .hero__title {
+    color: $slate;
+  }
+}
+
+// Buttons - ensure fuchsia primary
+.button--primary,
+.c-button--primary,
+button[type="submit"],
+input[type="submit"] {
+  background-color: $primary-color;
+
+  &:hover {
+    background-color: darken($primary-color, 8%);
+  }
+}
+
+// Secondary buttons with blue
+.button--secondary {
+  background-color: $secondary-color;
+
+  &:hover {
+    background-color: darken($secondary-color, 8%);
+  }
+}
+
+// Project cards
+.project-card {
+  border-color: $light-gray;
+
+  .project-card__title {
+    color: $slate;
+  }
+}
+
+// Contact form
+.contact-form {
+  .contact-form__title {
+    color: $slate;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: $secondary-color;
+  }
+}
+
+// Section headings
+.section__title {
+  color: $slate;
+}
+
+// Page heading
+.page-heading__title {
+  color: $slate;
+}
+
+// Content styling
+.content {
+  h2, h3, h4 {
+    color: $slate;
+  }
+
+  a {
+    color: $secondary-color;
+
+    &:hover {
+      color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+// Testimonials section (if used)
+.testimonials-section {
+  .section__title {
+    color: $slate;
+  }
+}

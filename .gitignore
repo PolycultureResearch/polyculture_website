@@ -1,0 +1,11 @@
+# Build output
+public/
+
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo

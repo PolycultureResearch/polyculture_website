@@ -29,7 +29,8 @@ keywords = ["data science", "analytics", "sustainability", "consulting", "B Corp
 navigation = [
     { url = "$BASE_URL", title = "Home" },
     { url = "$BASE_URL/services", title = "Services" },
-    { url = "$BASE_URL/projects", title = "Case Studies" },
+    { url = "$BASE_URL/projects", title = "Projects" },
+    { url = "$BASE_URL/posts", title = "Blog" },
     { url = "$BASE_URL/about", title = "About" },
     { url = "$BASE_URL/contact", title = "Contact" },
 ]
@@ -40,7 +41,8 @@ social_icons = []
 menu = [
     { url = "$BASE_URL", title = "Home" },
     { url = "$BASE_URL/services", title = "Services" },
-    { url = "$BASE_URL/projects", title = "Case Studies" },
+    { url = "$BASE_URL/projects", title = "Projects" },
+    { url = "$BASE_URL/posts", title = "Blog" },
     { url = "$BASE_URL/about", title = "About" },
     { url = "$BASE_URL/contact", title = "Contact" },
 ]
@@ -56,7 +58,7 @@ image_alt = "Alemany Farm - urban agriculture in San Francisco"
 cta_button_link = "/contact"
 cta_button = "Start a Conversation"
 works_button_link = "/projects"
-works_button = "View Case Studies"
+works_button = "View Projects"
 
 [[extra.content_blocks]]
 block = "projects-section"

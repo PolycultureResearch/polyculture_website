@@ -114,3 +114,210 @@ input[type="submit"] {
     color: $slate;
   }
 }
+
+// ===========================================
+// Full-Bleed Hero Section
+// ===========================================
+
+.c-hero-fullbleed {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh; // Small viewport height for mobile
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  // Background image
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  // Dark gradient overlay for text readability
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba($slate, 0.85) 0%,
+      rgba($slate, 0.6) 40%,
+      rgba($slate, 0.3) 70%,
+      rgba($slate, 0.1) 100%
+    );
+
+    @media only screen and (max-width: $tablet) {
+      background: linear-gradient(
+        180deg,
+        rgba($slate, 0.7) 0%,
+        rgba($slate, 0.5) 50%,
+        rgba($slate, 0.3) 100%
+      );
+    }
+  }
+
+  // Content container
+  &__content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 900px;
+    padding: 120px 24px 80px;
+    text-align: center;
+
+    @media only screen and (max-width: $tablet) {
+      padding: 100px 20px 60px;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      padding: 80px 16px 50px;
+    }
+  }
+
+  // Main title - big and bold
+  &__title {
+    font-family: $heading-font-family;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    color: $white;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
+
+    @media only screen and (max-width: $mobile) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // Description text
+  &__description {
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+
+    p {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      line-height: 1.6;
+      color: rgba($white, 0.95);
+      margin-bottom: 0;
+      text-shadow: 0 1px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    strong {
+      color: $white;
+      font-weight: 600;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // Button container
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .c-button {
+      padding: 18px 36px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 16px;
+      text-decoration: none;
+
+      @media only screen and (max-width: $mobile) {
+        padding: 14px 28px;
+        font-size: 15px;
+        width: 100%;
+      }
+    }
+
+    // Primary button - use the fuchsia accent
+    .c-button--primary {
+      background: $primary-color;
+      color: $white;
+      border: 2px solid $primary-color;
+
+      &:hover {
+        background: darken($primary-color, 8%);
+        border-color: darken($primary-color, 8%);
+        color: $white;
+      }
+    }
+
+    // Outline button style for secondary CTA
+    .c-button--outline {
+      background: transparent;
+      color: $white;
+      border: 2px solid $white;
+
+      &:hover {
+        background: $white;
+        color: $slate;
+      }
+    }
+  }
+
+  // Scroll indicator
+  &__scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: rgba($white, 0.7);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $mobile) {
+      bottom: 24px;
+      gap: 8px;
+    }
+  }
+
+  &__scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(180deg, rgba($white, 0.6) 0%, transparent 100%);
+    animation: scrollPulse 2s ease-in-out infinite;
+
+    @media only screen and (max-width: $mobile) {
+      height: 30px;
+    }
+  }
+}
+
+// Scroll indicator animation
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.1);
+  }
+}

@@ -183,7 +183,7 @@ button[type="submit"],
 }
 
 // ================
-// Arrow icon in "View Case Studies" button
+// Arrow icon in "View Projects" button
 // ================
 .works-button .circle-bg {
   background: $primary-color;
@@ -195,3 +195,8 @@ button[type="submit"],
 .social {
   display: none !important;
 }
+
+// ================
+// Import additional custom styles
+// ================
+@import "custom";

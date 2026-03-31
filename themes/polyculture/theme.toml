@@ -1,0 +1,9 @@
+[theme]
+name = "Polyculture"
+description = "Custom theme for Polyculture Research"
+license = "MIT"
+homepage = "https://polycultureresearch.com"
+min_version = "0.18.0"
+
+[author]
+name = "Devon"

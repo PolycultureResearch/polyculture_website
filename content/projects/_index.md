@@ -1,14 +1,7 @@
 +++
 title = "Projects"
-sort_by = "date"
-page_template = "project.html"
-
-[[extra.content_blocks]]
-block = "page-heading"
-title = "Projects"
 description = "Real-world examples of how data drives better decisions for sustainability-focused companies"
-
-[[extra.content_blocks]]
-block = "projects-list"
-show_projects = true
+sort_by = "date"
+template = "section.html"
+page_template = "page.html"
 +++

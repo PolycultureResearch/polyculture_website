@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="page">
+  <header class="page__header">
+    <div class="container">
+      <h1 class="page__title">{{ section.title }}</h1>
+      {% if section.description %}
+      <p class="page__description">{{ section.description }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="container">
+    {% if section.content %}
+    <div class="content">
+      {{ section.content | safe }}
+    </div>
+    {% endif %}
+
+    <!-- List pages in this section -->
+    {% if paginator %}
+    {% set pages = paginator.pages %}
+    {% else %}
+    {% set pages = section.pages %}
+    {% endif %}
+
+    {% if pages | length > 0 %}
+    <div class="post-list">
+      {% for page in pages %}
+      <article class="post-card">
+        {% if page.extra.image %}
+        <a href="{{ page.permalink }}" class="post-card__image">
+          <img src="{{ get_url(path=page.extra.image) }}" alt="{{ page.title }}">
+        </a>
+        {% endif %}
+        <div class="post-card__content">
+          {% if page.taxonomies.tags %}
+          <div class="post-card__tags">
+            {% for tag in page.taxonomies.tags %}
+            <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">{{ tag }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <h2 class="post-card__title">
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
+          </h2>
+          {% if page.description %}
+          <p class="post-card__excerpt">{{ page.description }}</p>
+          {% elif page.summary %}
+          <p class="post-card__excerpt">{{ page.summary | striptags | truncate(length=150) }}</p>
+          {% endif %}
+          <time class="post-card__date" datetime="{{ page.date }}">
+            {{ page.date | date(format="%B %d, %Y") }}
+          </time>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if paginator %}
+    <nav class="pagination">
+      {% if paginator.previous %}
+      <a href="{{ paginator.previous }}" class="pagination__link">&larr; Newer</a>
+      {% endif %}
+      <span class="pagination__info">Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+      {% if paginator.next %}
+      <a href="{{ paginator.next }}" class="pagination__link">Older &rarr;</a>
+      {% endif %}
+    </nav>
+    {% endif %}
+    {% endif %}
+  </div>
+</article>
+{% endblock %}

@@ -1,0 +1,703 @@
+// Polyculture Theme - Main Stylesheet
+
+// ===========================================
+// Variables
+// ===========================================
+
+// Colors
+$primary: #FF2E7E;           // Fuchsia - CTAs, highlights
+$secondary: #2D9CDB;         // Electric Blue - links, data viz
+$slate: #3D4F5F;             // Slate - headers, emphasis
+$dark: #1E1E1E;              // Near black - body text
+$light-gray: #E8EAED;        // Light slate - cards, borders
+$cream: #FAF7F2;             // Warm cream - background
+$white: #FFFFFF;
+
+// Typography
+$font-heading: 'Figtree', system-ui, sans-serif;
+$font-body: 'Source Serif 4', Georgia, serif;
+
+// Spacing
+$container-width: 1100px;
+$container-padding: 24px;
+
+// Breakpoints
+$tablet: 768px;
+$mobile: 480px;
+
+// ===========================================
+// Reset & Base
+// ===========================================
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+
+  @media (max-width: $tablet) {
+    font-size: 17px;
+  }
+}
+
+body {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $dark;
+  background: $cream;
+  -webkit-font-smoothing: antialiased;
+}
+
+// ===========================================
+// Typography
+// ===========================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 700;
+  line-height: 1.15;
+  color: $slate;
+  letter-spacing: -0.025em;
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+h2 { font-size: 1.75rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+h3 { font-size: 1.35rem; margin-top: 2rem; margin-bottom: 0.5rem; }
+h4 { font-size: 1.1rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+a {
+  color: $secondary;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: darken($secondary, 12%);
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $light-gray;
+  margin: 2.5rem 0;
+}
+
+ul, ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+blockquote {
+  font-family: $font-heading;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: $slate;
+  border-left: 3px solid $primary;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+}
+
+// ===========================================
+// Layout
+// ===========================================
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+.main {
+  min-height: calc(100vh - 200px);
+}
+
+// ===========================================
+// Header
+// ===========================================
+
+.header {
+  padding: 1.5rem 0;
+  background: $cream;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    font-family: $font-heading;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: $slate;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+
+    &:hover {
+      color: $slate;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: $slate;
+      transition: 0.2s;
+    }
+
+    @media (max-width: $tablet) {
+      display: flex;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: $tablet) {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: $cream;
+      padding: 1rem $container-padding;
+      border-bottom: 1px solid $light-gray;
+
+      &.is-open {
+        display: flex;
+      }
+    }
+  }
+
+  &__link {
+    font-family: $font-body;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: $slate;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &--active {
+      color: $primary;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: $primary;
+
+        @media (max-width: $tablet) {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: $tablet) {
+      padding: 0.75rem 0;
+      display: block;
+    }
+  }
+}
+
+// ===========================================
+// Hero
+// ===========================================
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba($slate, 0.85) 0%,
+      rgba($slate, 0.6) 40%,
+      rgba($slate, 0.3) 70%,
+      rgba($slate, 0.1) 100%
+    );
+
+    @media (max-width: $tablet) {
+      background: linear-gradient(
+        180deg,
+        rgba($slate, 0.75) 0%,
+        rgba($slate, 0.5) 50%,
+        rgba($slate, 0.3) 100%
+      );
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: $container-padding;
+  }
+
+  &__title {
+    font-size: clamp(3rem, 10vw, 5.5rem);
+    font-weight: 800;
+    color: $white;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  &__subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    color: rgba($white, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: rgba($white, 0.7);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    @media (max-width: $mobile) {
+      bottom: 24px;
+    }
+  }
+
+  &__scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(180deg, rgba($white, 0.6) 0%, transparent 100%);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.1); }
+}
+
+// ===========================================
+// Page
+// ===========================================
+
+.page {
+  &__header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+
+    @media (max-width: $tablet) {
+      padding: 3rem 0 1.5rem;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.15rem;
+    color: rgba($dark, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// ===========================================
+// Content
+// ===========================================
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+
+  // First element shouldn't have top margin
+  > :first-child {
+    margin-top: 0;
+  }
+
+  // Links in content get underline
+  a {
+    text-decoration: underline;
+    text-decoration-color: rgba($secondary, 0.4);
+    text-underline-offset: 2px;
+
+    &:hover {
+      text-decoration-color: $secondary;
+    }
+  }
+
+  // Inline code
+  code {
+    font-family: 'SF Mono', Consolas, monospace;
+    font-size: 0.9em;
+    background: rgba($slate, 0.08);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+  }
+
+  // Code blocks
+  pre {
+    background: $slate;
+    color: $white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+
+    code {
+      background: none;
+      padding: 0;
+      font-size: 0.85rem;
+    }
+  }
+
+  // Images
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+  }
+}
+
+// ===========================================
+// Blog Post
+// ===========================================
+
+.post {
+  &__header {
+    padding: 4rem 0 2rem;
+    text-align: center;
+
+    @media (max-width: $tablet) {
+      padding: 3rem 0 1.5rem;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    a {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $primary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+    }
+  }
+
+  &__meta {
+    font-size: 0.95rem;
+    color: rgba($dark, 0.6);
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  &__image {
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+}
+
+// ===========================================
+// Post List
+// ===========================================
+
+.post-list {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.post-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  &__image {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 8px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  &__content {
+    padding: 0.25rem 0;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    a {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem;
+
+    a {
+      color: $slate;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &__excerpt {
+    font-size: 0.95rem;
+    color: rgba($dark, 0.7);
+    margin-bottom: 0.5rem;
+  }
+
+  &__date {
+    font-size: 0.85rem;
+    color: rgba($dark, 0.5);
+  }
+}
+
+// ===========================================
+// Pagination
+// ===========================================
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid $light-gray;
+
+  &__link {
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  &__info {
+    font-size: 0.9rem;
+    color: rgba($dark, 0.6);
+  }
+}
+
+// ===========================================
+// Buttons
+// ===========================================
+
+.button {
+  display: inline-block;
+  font-family: $font-body;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+
+  &--primary {
+    background: $primary;
+    color: $white;
+
+    &:hover {
+      background: darken($primary, 8%);
+      color: $white;
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: $slate;
+    border: 2px solid $slate;
+
+    &:hover {
+      background: $slate;
+      color: $white;
+    }
+  }
+}
+
+// Style markdown links that look like buttons
+.content a[href^="mailto:"] {
+  display: inline-block;
+  background: $primary;
+  color: $white;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 0.5rem;
+
+  &:hover {
+    background: darken($primary, 8%);
+    color: $white;
+  }
+}
+
+// ===========================================
+// Footer
+// ===========================================
+
+.footer {
+  background: $slate;
+  color: rgba($white, 0.8);
+  padding: 3rem 0;
+  margin-top: 4rem;
+  text-align: center;
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    a {
+      color: rgba($white, 0.8);
+      text-decoration: none;
+      font-size: 0.95rem;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 0.85rem;
+    color: rgba($white, 0.5);
+    margin: 0;
+  }
+}
+
+// ===========================================
+// Utilities
+// ===========================================
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 2rem; }

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="post">
+  <header class="post__header">
+    <div class="container">
+      {% if page.taxonomies.tags %}
+      <div class="post__tags">
+        {% for tag in page.taxonomies.tags %}
+        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <h1 class="post__title">{{ page.title }}</h1>
+
+      <div class="post__meta">
+        <time datetime="{{ page.date }}">{{ page.date | date(format="%B %d, %Y") }}</time>
+        {% if page.reading_time %}
+        <span class="post__reading-time">{{ page.reading_time }} min read</span>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  {% if page.extra.image %}
+  <div class="post__image">
+    <div class="container">
+      <img src="{{ get_url(path=page.extra.image) }}" alt="{{ page.title }}">
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="container">
+    <div class="content">
+      {{ page.content | safe }}
+    </div>
+  </div>
+</article>
+{% endblock %}

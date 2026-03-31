@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="page">
+  <header class="page__header">
+    <div class="container">
+      <h1 class="page__title">{{ term.name | title }}</h1>
+      <p class="page__description">{{ term.pages | length }} post{% if term.pages | length != 1 %}s{% endif %}</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="post-list">
+      {% for page in term.pages %}
+      <article class="post-card">
+        {% if page.extra.image %}
+        <a href="{{ page.permalink }}" class="post-card__image">
+          <img src="{{ get_url(path=page.extra.image) }}" alt="{{ page.title }}">
+        </a>
+        {% endif %}
+        <div class="post-card__content">
+          <h2 class="post-card__title">
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
+          </h2>
+          {% if page.description %}
+          <p class="post-card__excerpt">{{ page.description }}</p>
+          {% endif %}
+          <time class="post-card__date" datetime="{{ page.date }}">
+            {{ page.date | date(format="%B %d, %Y") }}
+          </time>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</article>
+{% endblock %}

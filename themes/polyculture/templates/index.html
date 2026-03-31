@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ config.title }}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+  {% if config.extra.hero.image %}
+  <div class="hero__background">
+    <img src="{{ get_url(path=config.extra.hero.image) }}" alt="{{ config.extra.hero.image_alt | default(value='') }}">
+    <div class="hero__overlay"></div>
+  </div>
+  {% endif %}
+
+  <div class="hero__content">
+    <h1 class="hero__title">{{ config.extra.hero.title | default(value=config.title) }}</h1>
+    {% if config.extra.hero.subtitle %}
+    <p class="hero__subtitle">{{ config.extra.hero.subtitle }}</p>
+    {% endif %}
+  </div>
+
+
+</section>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="content">
+    {{ section.content | safe }}
+  </div>
+</div>
+{% endblock %}

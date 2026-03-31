@@ -1,9 +1,9 @@
-# Polyculture Research website configuration - Vonge theme
-base_url = "https://polycultureresearch.github.io/polyculture-research"
+# Polyculture Research website configuration
+base_url = "https://polycultureresearch.com"
 title = "Polyculture Research"
 description = "Data science and analytics consulting for sustainability-focused companies. Measure what matters."
 author = "Devon"
-theme = "vonge"
+theme = "polyculture"
 
 compile_sass = true
 minify_html = true
@@ -19,69 +19,27 @@ taxonomies = [
 smart_punctuation = true
 
 [extra]
-logo_image = ""
-social_media_share_image = ""
-author_image = ""
-date_format = "%B %d, %Y"
-language_direction = "auto"
 keywords = ["data science", "analytics", "sustainability", "consulting", "B Corp"]
 
 navigation = [
     { url = "$BASE_URL", title = "Home" },
     { url = "$BASE_URL/services", title = "Services" },
-    { url = "$BASE_URL/projects", title = "Projects" },
     { url = "$BASE_URL/posts", title = "Blog" },
     { url = "$BASE_URL/about", title = "About" },
     { url = "$BASE_URL/contact", title = "Contact" },
 ]
 
-social_icons = []
+[extra.hero]
+title = "Measure what matters"
+image = "/images/alamany_farm.jpeg"
+image_alt = "Alemany Farm - urban agriculture in San Francisco"
 
 [extra.footer]
 menu = [
     { url = "$BASE_URL", title = "Home" },
     { url = "$BASE_URL/services", title = "Services" },
-    { url = "$BASE_URL/projects", title = "Projects" },
     { url = "$BASE_URL/posts", title = "Blog" },
     { url = "$BASE_URL/about", title = "About" },
     { url = "$BASE_URL/contact", title = "Contact" },
 ]
 copyright = "Polyculture Research"
-
-# Homepage content blocks
-[[extra.content_blocks]]
-block = "hero"
-title = "Measure what matters"
-description_html = """<strong>Data science and analytics consulting</strong> for sustainability-focused companies. Track the KPIs that drive business decisions and the metrics that matter for our planet—clean air, clean water, and a livable future."""
-image = "/images/alamany_farm.jpeg"
-image_alt = "Alemany Farm - urban agriculture in San Francisco"
-cta_button_link = "/contact"
-cta_button = "Start a Conversation"
-works_button_link = "/projects"
-works_button = "View Projects"
-
-[[extra.content_blocks]]
-block = "projects-section"
-title = "Featured Work"
-description_html = """<p>Real-world examples of how data drives better decisions for sustainability-focused companies.</p>"""
-link_url = "/projects"
-show_projects = true
-
-[[extra.content_blocks]]
-block = "content"
-content_html = """
-<h2>Built for startup velocity, grounded in academic rigor</h2>
-<p>I'm not a typical consultant. With a PhD in Environmental Studies and over 10 years building data science functions at fast-moving startups, I bridge two worlds that rarely meet.</p>
-<p><strong>The startup side:</strong> I was the 7th employee at FastAF, scaling analytics from zero to $20M+ revenue. I led a 5-person data science team at VSCO. I know what it takes to move fast and make decisions with imperfect data.</p>
-<p><strong>The research side:</strong> My PhD work in Mexico studied sustainable food systems. I bring the same rigor to business metrics—asking the right questions, validating assumptions, and building systems that hold up to scrutiny.</p>
-"""
-
-[[extra.content_blocks]]
-block = "content"
-content_html = """
-<h2 style="text-align: center;">Ready to measure what matters?</h2>
-<p style="text-align: center;">Let's talk about your data challenges.</p>
-<div style="text-align: center; margin: 2rem 0;">
-  <a href="mailto:devon@polycultureresearch.com" class="c-button c-button--primary c-button--large">Get in Touch</a>
-</div>
-"""

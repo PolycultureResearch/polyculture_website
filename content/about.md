@@ -13,7 +13,7 @@ Polyculture Research is a full-stack data science agency focused on building tru
 **Justin Fung**  
 *Data Engineering | Full-stack Data Science | ML Engineering*
 
-**Brian Haven**  
+**Bryan Haven**  
 *Marketing Analytics | Customer Acquisition Strategy*
 
 **Chelsea Sampson Wills**  

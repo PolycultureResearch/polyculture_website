@@ -3,77 +3,38 @@ title = "About Polyculture Research"
 description = "Measure what matters"
 +++
 
-## Hi, I'm Devon.
+Polyculture Research is a full-stack data science agency focused on building trustworthy analytics for companies with a commitment to sustainability. We're based in Petaluma, California, and work with clients around the world. 
 
-I help sustainability-focused companies build data capabilities that drive real decisions. Based in Petaluma, California, I work with clients across the US.
+## The team
 
-My path to data consulting wasn't linear. I started as an environmental researcher, earned a PhD studying sustainable food systems in Mexico, and then spent a decade in startup data science. That combination shapes how I approach every project.
+Devon Sampson Wills
+Analytics Engineering | Causal Inference | Environmental and Sustainability Indicators
 
----
+Justin Fung 
+Data Engineering | Full-stack Data Science | ML Engineering
 
-## Experience
+Brian Haven 
+Marketing Analytics | Customer Acquisition Strategy
 
-### Polyculture Research
-**Founder** — 2024-Present
+Chelsea Sampson Wills 
+Business Strategy | Administration 
 
-Independent consulting practice focused on data science and analytics for sustainability-focused companies. Also advising MagicMenu, a pre-seed healthcare AI startup.
+## Why polyculture? 
 
-### VSCO
-**Data Science Manager** — 2020-2024
+Polyculture is the practice of growing more than one crop in the same space. Think the famous three sisters, maize, beans, and squash, of the Milpa; or traditional rice paddies that produce rice but also freshwater shrimp and wild green vegetables. After a three-year academic research project on polycultures in Southern Mexico, Devon and Chelsea were fascinated with diverse gardens and farms and all the skill, creativity and knowledge it takes to run them. We started Polyculture Research in 2015 to do applied research in that kind of agricultural ecosystem. He ran international projects for the UN Food and Agriculture Organization and the National Science Foundation. We started specializing in big synthesis projects, combining data from many sites and contexts to find new insights. That work became increasingly quantitative and statistical, and before we knew it, Polyculture Research was doing data science. 
 
-Led a team of 5 data scientists supporting product, marketing, and business decisions for a creative platform with millions of users. Built experimentation frameworks, predictive models, and analytics infrastructure.
+When the pandemic limited our ability to travel to field sites, Polyculture started working with software startups. A lot was new about that world, but our background in ecology served us well: finding signals in complex and noisy data, pairing urgent questions with methods that could actually answer those questions, thinking systemically while staying grounded in evidence -- those were transferable skills.
 
-### FastAF
-**Data Scientist** — 2017-2020
+Polyculture helped more than a dozen startups, venture capital firms, and nonprofit organizations design and implement their data and analytics systems. For some it involved a new data stack from scratch, and for others it was an overhaul of an existing data stack that had become unwieldy, hard to maintain, and had slowly eroded trust in data. Our job was to fix the data, and we were good at it. While each organization and their data were unique, we found that the path to building trustworthy data systems was similar at each. 
 
-7th employee at a luxury goods startup. Scaled analytics from zero to support $20M+ annual revenue. Built the entire data stack: warehouse, pipelines, dashboards, and predictive models.
+We put polyculture on ice for a few years while Devon led the data science team at VSCO, a photography startup company. Now we're re-launching Polyculture with a return to our environmental roots. We see a need to measure both business metrics and sustainability metrics, and we think we can use many of the methods and tools we used with software startups to do both, better than any other solution out there. 
 
-### MileIQ
-**Data Scientist** — 2015-2017
-
-Product analytics and machine learning for an automatic mileage tracking app (acquired by Microsoft).
-
-### PhD Research
-**Environmental Studies** — 2010-2015
-
-Doctoral research in Mexico on sustainable food systems, studying the intersection of agriculture, ecology, and local economies.
+We know businesses that have a real commitment to sustainability have to hold more than one goal in mind all the time. They grow their revenue and their customer base, and they grow their ability to care for the environment, their workers, and their communities. Sometimes those goals are in tension, and many times they support each other. It's a lot like growing more than one thing, like a polyculture. 
 
 ---
 
-## Technical Toolkit
+## Let's Talk
 
-**Infrastructure:** Snowflake, BigQuery, Redshift, dbt, Databricks, Airflow
-
-**BI & Visualization:** Tableau, Looker, Mode, Count.co, Metabase
-
-**Languages & Libraries:** Python, R, SQL, pandas, scikit-learn, statsmodels
-
-**Methods:** Experimentation design, causal inference, time series forecasting, classification, clustering, NLP
-
----
-
-## Approach
-
-**Ask better questions.** The most valuable part of analytics isn't the dashboard—it's figuring out what you actually need to know. I spend significant time upfront understanding your business and the decisions you're trying to make.
-
-**Build for maintainability.** Clever solutions that only I can understand aren't solutions at all. Everything I build is documented, tested, and designed to be maintained by your team.
-
-**Move fast without breaking things.** Startup experience taught me to deliver value quickly. Research training taught me to validate assumptions. Both are essential.
-
-**Enable, don't gatekeep.** My goal is to build your team's capability, not create dependency. Training and knowledge transfer are built into every engagement.
-
----
-
-## Outside Work
-
-When I'm not working with data, you'll find me in the garden, cooking, or exploring Sonoma County with my family. The name "Polyculture Research" comes from my background in sustainable agriculture—polyculture is the practice of growing multiple crops together, creating systems that are more resilient and productive than monocultures.
-
-I believe the same principle applies to business: diverse approaches, multiple perspectives, and interconnected systems create better outcomes than narrow optimization.
-
----
-
-## Let's Connect
-
-I'm always interested in talking with sustainability-focused companies about their data challenges.
+We're always interested in talking with sustainability-focused companies about their data challenges.
 
 [Get in Touch](mailto:devon@polycultureresearch.com)

@@ -24,7 +24,6 @@ keywords = ["data science", "analytics", "sustainability", "consulting", "B Corp
 navigation = [
     { url = "$BASE_URL", title = "Home" },
     { url = "$BASE_URL/services", title = "Services" },
-    { url = "$BASE_URL/posts", title = "Blog" },
     { url = "$BASE_URL/about", title = "About" },
     { url = "$BASE_URL/contact", title = "Contact" },
 ]
@@ -38,7 +37,6 @@ image_alt = "Alemany Farm - urban agriculture in San Francisco"
 menu = [
     { url = "$BASE_URL", title = "Home" },
     { url = "$BASE_URL/services", title = "Services" },
-    { url = "$BASE_URL/posts", title = "Blog" },
     { url = "$BASE_URL/about", title = "About" },
     { url = "$BASE_URL/contact", title = "Contact" },
 ]

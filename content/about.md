@@ -7,17 +7,17 @@ Polyculture Research is a full-stack data science agency focused on building tru
 
 ## The team
 
-Devon Sampson Wills
-Analytics Engineering | Causal Inference | Environmental and Sustainability Indicators
+**Devon Sampson Wills**  
+*Analytics Engineering | Causal Inference | Environmental and Sustainability Indicators*
 
-Justin Fung 
-Data Engineering | Full-stack Data Science | ML Engineering
+**Justin Fung**  
+*Data Engineering | Full-stack Data Science | ML Engineering*
 
-Brian Haven 
-Marketing Analytics | Customer Acquisition Strategy
+**Brian Haven**  
+*Marketing Analytics | Customer Acquisition Strategy*
 
-Chelsea Sampson Wills 
-Business Strategy | Administration 
+**Chelsea Sampson Wills**  
+B*usiness Strategy | Administration*
 
 ## Why polyculture? 
 

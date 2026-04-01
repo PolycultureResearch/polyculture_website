@@ -1,6 +1,6 @@
 +++
 title = "About Polyculture Research"
-description = "Measure what matters"
+description = "Polyculture Research is a data science and analytics consultancy based in Petaluma, CA. We help sustainability-focused companies measure what matters — business performance and environmental impact."
 +++
 
 Polyculture Research is a full-stack data science agency focused on building trustworthy analytics for companies with a commitment to sustainability. We're based in Petaluma, California, and work with clients around the world. 

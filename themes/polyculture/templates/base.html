@@ -13,10 +13,16 @@
   <meta name="keywords" content="{{ config.extra.keywords | join(sep=', ') }}">
   {% endif %}
 
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ current_url }}">
+
   <!-- Open Graph -->
   <meta property="og:title" content="{{ page.title | default(value=config.title) }}">
   <meta property="og:description" content="{{ page.description | default(value=config.description) }}">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ current_url }}">
+  <meta property="og:image" content="{{ config.base_url }}/images/alamany_farm.jpeg">
+  <meta property="og:site_name" content="{{ config.title }}">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +37,36 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path='atom.xml') }}">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Organization", "LocalBusiness"],
+    "name": "Polyculture Research",
+    "description": "Data science and analytics consulting for sustainability-focused companies. We help growing companies measure business performance and environmental impact.",
+    "url": "{{ config.base_url }}",
+    "email": "devon@polycultureresearch.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Petaluma",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "areaServed": "US",
+    "founder": {
+      "@type": "Person",
+      "name": "Devon Sampson Wills"
+    },
+    "knowsAbout": [
+      "data science", "analytics engineering", "sustainability metrics",
+      "dbt", "Snowflake", "BigQuery", "Databricks",
+      "carbon accounting", "B Corp metrics", "churn prediction",
+      "customer segmentation", "data infrastructure"
+    ],
+    "slogan": "Measure what matters"
+  }
+  </script>
 
   {% block head %}{% endblock %}
 </head>

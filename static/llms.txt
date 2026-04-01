@@ -1,0 +1,19 @@
+# Polyculture Research
+
+> Data science and analytics consulting for sustainability-focused companies. We help growing businesses measure what matters — both the KPIs that drive decisions and the environmental metrics that matter for the planet.
+
+Polyculture Research is based in Petaluma, California and works with clients across the US. Founded by Devon Sampson Wills, PhD (Environmental Studies) with 10+ years of data science experience at fast-moving startups including VSCO.
+
+We specialize in companies between $5M–$30M in annual revenue that are committed to sustainability — B Corps, environmental businesses, and mission-driven companies that need sophisticated analytics without a full in-house data team.
+
+## Services
+
+- [Services](https://polycultureresearch.com/services): Data infrastructure (Snowflake, BigQuery, dbt), core business analytics (ARR, MRR, churn, retention), predictive analytics (churn prediction, customer segmentation, LTV modeling), and sustainability metrics (carbon accounting, B Corp metrics, supply chain transparency).
+
+## About
+
+- [About](https://polycultureresearch.com/about): Team background, company history, and why we started Polyculture Research. Devon holds a PhD in Environmental Studies and led a 5-person data science team at VSCO before founding Polyculture.
+
+## Contact
+
+- [Contact](https://polycultureresearch.com/contact): Reach us at devon@polycultureresearch.com. Based in Petaluma, CA; working with clients nationwide.

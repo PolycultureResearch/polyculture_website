@@ -191,15 +191,13 @@ blockquote {
       top: 100%;
       left: 0;
       right: 0;
+      z-index: 200;
       flex-direction: column;
       gap: 0;
       background: $cream;
       padding: 1rem $container-padding;
       border-bottom: 1px solid $light-gray;
-
-      &.is-open {
-        display: flex;
-      }
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -703,3 +701,10 @@ blockquote {
 
 .mt-2 { margin-top: 2rem; }
 .mb-2 { margin-bottom: 2rem; }
+
+// Mobile nav open state — kept flat (outside nesting) to ensure correct compilation
+@media (max-width: 768px) {
+  .nav__menu.is-open {
+    display: flex;
+  }
+}

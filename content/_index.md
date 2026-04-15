@@ -16,11 +16,12 @@ Data can be complicated, but the playbook for building trustworthy analytics is 
 
 ## Many sources of data, one source of truth
 
-You have many sources of data: your marketing tools, web analytics, transaction data, carbon accounting. Some of the highest-value analytical questions require data from multiple sources. Which marketing platforms are helping us acquire customers with the highest lifetime value? What sustainability initiatives have the highest return on investment in terms of carbon footprint? These require analytics across data silos. 
+You have many sources of data: marketing and CRM tools, web and mobile analytics, attribution data, e-commerce transactions, carbon accounting. Some of the highest-value analytical questions require data from multiple sources. Which marketing platforms are helping us acquire customers with the highest lifetime value? What sustainability initiatives have the highest return on investment in terms of carbon footprint? These require analytics across data silos. 
 
-At Polyculture Research, we don't sell specialized solutions for understanding each kind of data in isolation. We don't even sell a mega platform that promises to handle all your data within its proprietary black box. We take a different approach. We help you set up the data stack that delivers for your company, and the data model that creates insights from raw data. You own your data, keep it in your data warehouse, and model it with proven, transparent, cost-efficient tools. 
+At Polyculture Research, we don't sell specialized solutions for understanding each kind of data in isolation. We don't even sell a mega platform that promises to handle all your data within its proprietary black box. We take a different approach. We help you set up the systems that deliver data to your company, and the logic that turns raw data into insights. You own your data, stored in your data warehouse or platform, and modeled with proven, transparent, cost-effective tools.
 
-We can work with just about any data tool you have (we're experts in Snowflake, Databricks, BigQuery and more), and can work with your existing stack. We specialize in open-source and open-standards data technologies like dbt, Iceberg, and PyMC. Those tools tend to be the most secure, offer the most transparency and portability of your data, and deliver tremendous value. 
+<!-- Removed specific tool names (AWS, GCP, Snowflake, Databricks, dbt) — audience is founders/CEOs, not technical. Add full tool list to services page. -->
+We work with whatever tools your team already uses — and if your needs have grown beyond them, we can help you migrate. We specialize in creating platforms with open-source and open-standard tools to provide security, flexibility, and immediate value. 
 
 ## Ready to measure what matters?
 

@@ -3,8 +3,9 @@ title = "Measure what (really) matters"
 description = "Companies developed good methods and tools around business analytics. Mission-driven companies can use those tools to measure social and environmental impacts."
 date = 2026-06-05
 [taxonomies]
-tags = ["analytics", "sustainability", "impact measurement", "data science"]
+tags = ["measuring impact"]
 [extra]
+image = "/images/forest_hike.jpeg"
 +++
 
 Analytics is all about measuring a business so you can make better business decisions. I've done a lot of analytics for a lot of companies. Implementation  can be complex and challenging, but the idea is simple: measure business outcomes that you care about, and measure as many of the factors that contribute to those outcomes as possible. Then, use statistics and data modeling methods to understand how things you can change will affect the outcomes you care about. It's a mature field with a lot of powerful data tools, established methodologies, and best practices. 

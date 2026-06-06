@@ -1,6 +1,5 @@
 +++
-title = "Blog"
-description = "Thoughts on data science, sustainability metrics, and building analytics for growing companies"
+title = "Polyculture Research Blog"
 sort_by = "date"
 paginate_by = 6
 template = "section.html"

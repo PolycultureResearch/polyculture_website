@@ -25,6 +25,7 @@ navigation = [
     { url = "$BASE_URL", title = "Home" },
     { url = "$BASE_URL/services", title = "Services" },
     { url = "$BASE_URL/about", title = "About" },
+    { url = "$BASE_URL/posts", title = "Blog" },
     { url = "$BASE_URL/contact", title = "Contact" },
 ]
 
@@ -38,6 +39,7 @@ menu = [
     { url = "$BASE_URL", title = "Home" },
     { url = "$BASE_URL/services", title = "Services" },
     { url = "$BASE_URL/about", title = "About" },
+    { url = "$BASE_URL/posts", title = "Blog" },
     { url = "$BASE_URL/contact", title = "Contact" },
 ]
 copyright = "Polyculture Research"

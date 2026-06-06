@@ -7,4 +7,4 @@ more about what we offer coming soon.
 
 For now, let's talk about what you need. 
 
-[Discuss Your Project](mailto:devon@polycultureresearch.com)
+[Discuss Your Project](mailto:hello@polycultureresearch.com)

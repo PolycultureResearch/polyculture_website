@@ -1,0 +1,27 @@
+{# Full-width content band with optional side image.
+   Usage in markdown:
+   {% band(bg="cream", image="/images/heron_and_lilies.jpeg", image_alt="Heron", image_side="right") %}
+   ## Section title
+   Prose goes here, in plain markdown.
+   {% end %}
+
+   Params:
+   - bg:         cream | white | mist   (background color; default cream)
+   - image:      optional path under /static (e.g. /images/forest_hike.jpeg)
+   - image_alt:  alt text for the image
+   - image_side: left | right           (which side the image sits on; default right)
+#}
+{%- set bg = bg | default(value="cream") -%}
+{%- set image_side = image_side | default(value="right") -%}
+<section class="band band--{{ bg }}{% if image %} band--with-image band--image-{{ image_side }}{% endif %}">
+  <div class="band__inner">
+    <div class="band__text">
+{{ body | markdown | safe }}
+    </div>
+    {% if image %}
+    <div class="band__media">
+      <img src="{{ get_url(path=image) }}" alt="{{ image_alt | default(value='') }}" loading="lazy">
+    </div>
+    {% endif %}
+  </div>
+</section>

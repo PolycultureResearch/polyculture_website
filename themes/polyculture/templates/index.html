@@ -3,7 +3,9 @@
 {% block title %}{{ config.title }}{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
+{# ============================================================
+   HERO  — image, title and subtitle come from config.toml [extra.hero]
+   ============================================================ #}
 <section class="hero">
   {% if config.extra.hero.image %}
   <div class="hero__background">
@@ -13,19 +15,98 @@
   {% endif %}
 
   <div class="hero__content">
-    <h1 class="hero__title">{{ config.extra.hero.title | default(value=config.title) }}</h1>
+    <h1 class="hero__title">{{ config.extra.hero.title | default(value=config.title) | safe }}</h1>
     {% if config.extra.hero.subtitle %}
     <p class="hero__subtitle">{{ config.extra.hero.subtitle }}</p>
     {% endif %}
   </div>
 
-
 </section>
 
-<!-- Main Content -->
-<div class="container">
-  <div class="content">
-    {{ section.content | safe }}
+{# ============================================================
+   INTRO  — lead statement. Edit in content/_index.md [extra]
+   ============================================================ #}
+{% if section.extra.intro %}
+<section class="band band--cream intro">
+  <div class="band__inner">
+    <p class="intro__text">{{ section.extra.intro | safe }}</p>
+    {% if section.extra.intro_lead %}
+    <p class="intro__lead">{{ section.extra.intro_lead }}</p>
+    {% endif %}
   </div>
-</div>
+</section>
+{% endif %}
+
+{# ============================================================
+   SERVICES  — cards. Edit in content/_index.md [[extra.services]]
+   ============================================================ #}
+{% if section.extra.services %}
+<section class="band band--white services">
+  <div class="band__inner">
+    <div class="services__head">
+      {% if section.extra.services_eyebrow %}<span class="eyebrow">{{ section.extra.services_eyebrow }}</span>{% endif %}
+      {% if section.extra.services_heading %}<h2>{{ section.extra.services_heading }}</h2>{% endif %}
+      {% if section.extra.services_intro %}<p>{{ section.extra.services_intro }}</p>{% endif %}
+    </div>
+    <div class="service-grid">
+      {% for s in section.extra.services %}
+      <div class="service-card">
+        <div class="service-card__icon">
+          {% if s.icon == "infrastructure" %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+          {% elif s.icon == "analytics" %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16v-4"/><path d="M12 16V8"/><path d="M17 16v-6"/></svg>
+          {% elif s.icon == "predictive" %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+          {% elif s.icon == "sustainability" %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20.5c-4.4 0-7.5-3.1-7.5-7.5 0-5.5 5-9.5 17-9.5 0 12-4.5 17-9.5 17z"/><path d="M11 20.5c0-5.5 2.5-9.5 6.5-12.5"/></svg>
+          {% else %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>
+          {% endif %}
+        </div>
+        <h3 class="service-card__title">{{ s.title }}</h3>
+        <p class="service-card__body">{{ s.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ============================================================
+   NARRATIVE  — the prose bands written in content/_index.md
+   (each {% band() %} block becomes a full-width section)
+   ============================================================ #}
+{{ section.content | safe }}
+
+{# ============================================================
+   STATS  — Edit in content/_index.md [[extra.stats]]
+   ============================================================ #}
+{% if section.extra.stats %}
+<section class="band band--white stats">
+  <div class="band__inner">
+    <div class="stats-grid">
+      {% for stat in section.extra.stats %}
+      <div class="stat">
+        <div class="stat__value">{{ stat.value }}</div>
+        <div class="stat__label">{{ stat.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ============================================================
+   CTA  — Edit in content/_index.md [extra.cta]
+   ============================================================ #}
+{% if section.extra.cta %}
+<section class="cta-band">
+  <div class="container">
+    <h2>{{ section.extra.cta.title }}</h2>
+    {% if section.extra.cta.text %}<p>{{ section.extra.cta.text }}</p>{% endif %}
+    <a href="{{ section.extra.cta.button_url }}" class="button button--primary">{{ section.extra.cta.button_label }}</a>
+  </div>
+</section>
+{% endif %}
 {% endblock %}

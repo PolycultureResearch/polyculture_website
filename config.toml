@@ -30,7 +30,7 @@ navigation = [
 ]
 
 [extra.hero]
-title = "Measure what [really] matters"
+title = "Measure what <span class=\"hero__accent\">[really]</span> matters"
 image = "/images/alamany_farm.jpeg"
 image_alt = "Alemany Farm - urban agriculture in San Francisco"
 

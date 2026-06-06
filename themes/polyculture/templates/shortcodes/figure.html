@@ -1,0 +1,8 @@
+{# A captioned image for use inside body content.
+   Usage:  {{ figure(src="/images/devon_in_corn.jpeg", alt="Devon in a cornfield", caption="Field research in Maravatío") }}
+   Params: src (required), alt, caption (optional)
+#}
+<figure class="content-figure">
+  <img src="{{ get_url(path=src) }}" alt="{{ alt | default(value='') }}" loading="lazy">
+  {% if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}
+</figure>

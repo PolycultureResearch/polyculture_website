@@ -121,14 +121,14 @@ Small companies ($5-30M annual revenue) that are:
 
 | Role | Font | Weight | Usage |
 |------|------|--------|-------|
-| Headings | Fraunces | 700-800 | H1-H6, hero titles, section titles, logo |
+| Headings | Figtree | 600-800 | H1-H6, hero titles, section titles, logo, eyebrow labels |
 | Body | Source Serif 4 | 400-600 | Body text, paragraphs, navigation, buttons |
 
 **Design rationale:**
-- **Fraunces** is a soft, "wonky" old-style serif with optical sizing. It has warmth and personality without being stuffy—says "I have a PhD but I don't take myself too seriously." The slight quirkiness pairs well with the bold fuchsia.
-- **Source Serif 4** is highly readable and warm, with excellent optical sizing for body text. Creates a cohesive serif pairing while maintaining clear hierarchy.
-- Both fonts are variable fonts with optical sizing, meaning they automatically adjust their design for different sizes.
-- The serif pairing signals depth and credibility (academic side) while remaining warm and approachable.
+- **Figtree** is a clean, friendly geometric sans-serif. Its crisp, contemporary letterforms read as modern and trustworthy—the "data/engineering" side of the brand—and provide strong contrast against the warm serif body. The sans/serif pairing keeps headings confident and legible at large display sizes (hero) while the body stays warm and readable.
+- **Source Serif 4** is highly readable and warm, with excellent optical sizing for body text. The serif body signals depth and credibility (academic side) while remaining warm and approachable.
+- The Figtree (sans headings) + Source Serif 4 (serif body) pairing balances analytical precision with human warmth—mirroring the brand's electric-blue + fuchsia accent pairing.
+- Both are variable fonts; Source Serif 4 uses optical sizing to adjust its design across sizes.
 
 ### Key Design Elements
 - Service cards/sections with icons

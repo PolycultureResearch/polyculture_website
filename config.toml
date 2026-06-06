@@ -30,7 +30,7 @@ navigation = [
 ]
 
 [extra.hero]
-title = "Measure what matters"
+title = "Measure what [really] matters"
 image = "/images/alamany_farm.jpeg"
 image_alt = "Alemany Farm - urban agriculture in San Francisco"
 

@@ -8,6 +8,10 @@ tags = ["measuring impact"]
 image = "/images/forest_hike.jpeg"
 +++
 
+<audio controls preload="none" style="width:100%;margin-bottom:1.5rem;">
+  <source src="https://f004.backblazeb2.com/file/polyculture-public/Measure+what+really+matters.mp3" type="audio/mpeg">
+</audio>
+
 Analytics is all about measuring a business so you can make better business decisions. I've done a lot of analytics for a lot of companies. Implementation  can be complex and challenging, but the idea is simple: measure business outcomes that you care about, and measure as many of the factors that contribute to those outcomes as possible. Then, use statistics and data modeling methods to understand how things you can change will affect the outcomes you care about. It's a mature field with a lot of powerful data tools, established methodologies, and best practices. 
 
 Analytics has roots in 1950s management theory, and the idea that "what gets measured gets managed".  It grew up alongside computers and relational databases and cloud computing, taking on the (somewhat pretentious) monikers of Business Intelligence, and later, Data Science. By 2012, that combination of business context, computational chops and statistics were so in demand that Forbes called Data Science "sexiest job of the 21st century" (I was still doing biodiversity research in Mexico, so i didn't have a chance to let it go to my head).  In 2018, John Doerr published *Measure What Matters*, and companies started organizing their data into Objectives and Key Results (OKRs). Software tools sprouted up to convert the growing volumes of data companies collect into metrics, and by borrowing the best practices of software engineering like version control and automated testing, those tools -- many of them open-source and free to use -- made turning data into insights much faster, cheaper, and more reliable. Many companies found that they could indeed rally people around metrics to drive impressive growth. 

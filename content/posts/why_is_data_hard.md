@@ -3,7 +3,7 @@ title = "Why is data hard?"
 description = "An accountant asked me why data is so hard. It made me think about the root causes of everything that can go wrong in delivering even the most basic analytics."
 date = 2026-06-07
 [taxonomies]
-tags = ["measuring impact"]
+tags = ["trustworthy data"]
 [extra]
 image = "/images/maravatio_creek.jpeg"
 +++
@@ -29,11 +29,3 @@ What strikes me about the accountant's question is that most of the changes we m
 The best I could do in the bar that night was sip whisky and pretend to take it as a philosophical question, answering something like "well the transactional data is easy, it's the mountains of behavioral data, images and unstructured text that is hard." That's not untrue, but it's not the whole story. 
 
 I've thought about her question a lot, and about all the companies I've helped out of data quagmires and untrustworthy data systems. Honestly, it's a pretty simple playbook. Define the metrics, and drive consensus on those definitions across the entire company. Set them down in well documented, version controlled code. Create data contracts with the engineering teams who build the systems that generate data, and enforce them. Automate the pipelines to efficiently get all the data in to one place. Now, I think of it as building data systems an accountant would raise a glass to. 
-
-
-
-
----- scratchpad ---- 
-The truth was, we inherited a deeply difunctional data system, ten years of layered complexity running on inadequate, outdated technology.  Nightly builds broke regularly, but without as much as notifying the people who relied on the data being out of date. No one wanted to touch the queries because they "worked", as in no one complained about the numbers, and the people who had written them had moved on.
-
-The magic here is not in building a great analytics pipeline, or even in getting those metric definitions just right. It's in everything you can do when you're not struggling to report basic metrics. One of my favorite parts of fixing data systems is that i've seen this happen many times. Trust grows. Meetings stay focused on operations and strategy. Data teams dig into the *why* and the *what if*, not just the what happened. 

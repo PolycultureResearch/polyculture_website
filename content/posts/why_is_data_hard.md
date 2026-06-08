@@ -5,7 +5,7 @@ date = 2026-06-07
 [taxonomies]
 tags = ["measuring impact"]
 [extra]
-image = "static/images/maravatio_creek.jpeg"
+image = "/images/maravatio_creek.jpeg"
 +++
 
 After a long day of company planning, in a bar in San Francisco, a colleague asked me "there's something I've always wanted to ask. Why is data hard?"

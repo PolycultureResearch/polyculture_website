@@ -14,7 +14,7 @@ intro = "Polyculture Research is a full-stack data science studio for mission-dr
 
 # Services section header
 services_eyebrow = "What we do"
-services_heading = "Right-sized data science, end to end"
+services_heading = "We build trustworthy data systems."
 services_intro = "From critical metrics to advanced statistics and machine learning — we meet you where your stack is."
 
 # Service cards. icon = infrastructure | analytics | predictive | sustainability

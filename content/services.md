@@ -13,7 +13,7 @@ button_url = "mailto:hello@polycultureresearch.com"
 {% band(bg="cream", image="/images/ucsc_field_overlooking_monterrey_bay.jpeg", image_alt="Field overlooking Monterey Bay", image_side="right") %}
 <span class="eyebrow">Measure what matters</span>
 
-## Establish a Ground Truth
+## Establish a ground truth
 
 All companies have data. Most have metrics they measure the business by. But fewer have consistent, rigorous definitions of their metrics.  It may seem simple to define and track metrics like "active users" or "customers" or "revenue", but all too often, teams disagree on the definition or implementation of those metrics, and you might end up with conflicting numbers in your internal meetings, your board deck, and your sustainability report. If meetings ever derail on questions like "but is this data right?", you might need to step back and establish a ground truth for your metrics. 
 
@@ -32,7 +32,7 @@ For sustainability-focused companies, this is especially powerful. Business KPIs
 {% band(bg="white", image="/images/forest_hike.jpeg", image_alt="Hiking through a forest", image_side="left") %}
 <span class="eyebrow">Know what's actually driving results</span>
 
-## Understand What Moves Your Business
+## Understand what moves your business
 
 You made a change. Revenue went up. You launched a sustainability initiative. Engagement improved. But did the change *cause* the improvement — or would it have happened anyway?
 
@@ -53,7 +53,7 @@ This matters especially in sustainability work, where the pressure to show impac
 {% band(bg="mist", image="/images/alamany_farm.jpeg", image_alt="Alemany Farm", image_side="right") %}
 <span class="eyebrow">Build trust in your data</span>
 
-## Build Trust in Data by Building Trustworthy Data Products
+## Build trust in data by building trustworthy data products
 
 When was the last time a meeting got derailed by "wait, is that number right?" That's the real cost of untrustworthy data — not the wrong answer itself, but the hours spent debugging, the decisions delayed, the team that quietly stops looking at the dashboards.
 
@@ -74,7 +74,7 @@ This foundation is also what makes AI applications trustworthy. Everyone is expl
 {% band(bg="white", image="/images/maravatio_creek.jpeg", image_alt="Creek in Maravatio", image_side="left") %}
 <span class="eyebrow">Get ahead of what's coming</span>
 
-## Predict Before You React
+## Predict before you react
 
 The most valuable insight arrives before a problem becomes a problem. Before a customer churns, not after. Before demand spikes, not while you're scrambling to respond. Before a supply-chain issue surfaces in your carbon report, not when it's already in the news.
 

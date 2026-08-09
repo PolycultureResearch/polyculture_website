@@ -60,7 +60,7 @@ body = "Carbon accounting, supply-chain transparency, B Corp and custom environm
 title = "Ready to measure what matters?"
 text = "Let's talk about your data challenges."
 button_label = "Get in touch"
-button_url = "mailto:devon@polycultureresearch.com"
+button_url = "mailto:hello@polycultureresearch.com"
 +++
 
 {% band(bg="cream", image="/images/guatemala_onion_growers.jpeg", image_alt="Onion growers in Guatemala", image_side="right") %}

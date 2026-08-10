@@ -16,6 +16,7 @@ Small companies ($5-30M annual revenue) that are:
 - Too small to have an in-house data team
 - Committed sustainability or environmental conservation
 - Often B Corps or environmentally-focused businesses
+- Located anywhere in the world — the practice is based in Petaluma, California, but clients are international and engagements are remote
 
 ## Core Services
 
@@ -87,7 +88,7 @@ Small companies ($5-30M annual revenue) that are:
    - Contact form (can be simple for now)
    - Email address: contact@polycultureresearch.com (placeholder)
    - Location: Petaluma, California
-   - Note about working with clients across the US
+   - Note about working with clients anywhere in the world
 
 ## Design Requirements
 

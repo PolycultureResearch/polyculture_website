@@ -7,6 +7,6 @@ Whether you have a specific data challenge or a vaguer sense that your analytics
 
 I work with sustainability-focused companies across the US. First conversations are exploratory and low-pressure — the goal is to understand your situation and figure out whether we'd be a good fit, nothing more.
 
-**[hello@polycultureresearch.com](mailto:hello@polycultureresearch.com)**
+{{ button(url="mailto:hello@polycultureresearch.com", label="hello@polycultureresearch.com") }}
 
 Based in Petaluma, California. I typically respond within one business day.

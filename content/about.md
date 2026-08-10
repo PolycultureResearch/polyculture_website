@@ -36,4 +36,4 @@ We know businesses that have a real commitment to sustainability have to hold mo
 
 We're always interested in talking with sustainability-focused companies about their data challenges.
 
-[Get in Touch](mailto:hello@polycultureresearch.com)
+{{ button(url="mailto:hello@polycultureresearch.com", label="Get in Touch") }}

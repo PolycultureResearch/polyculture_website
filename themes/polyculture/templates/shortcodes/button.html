@@ -1,0 +1,9 @@
+{# A call-to-action button for use inside body content.
+   Usage:  {{ button(url="mailto:hello@polycultureresearch.com", label="Get in Touch") }}
+   Params:
+   - url:   required (any href — mailto:, https://, or an internal path)
+   - label: required (the button text)
+   - style: primary | secondary   (default primary)
+#}
+{%- set style = style | default(value="primary") -%}
+<a href="{{ url }}" class="button button--{{ style }}">{{ label }}</a>

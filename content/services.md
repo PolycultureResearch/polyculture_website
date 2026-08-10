@@ -23,8 +23,9 @@ For sustainability-focused companies, this is especially powerful. Business KPIs
 
 **What this looks like in practice:**
 
-- Core business metric definitions — revenue, churn, retention, engagement — agreed on and written down
+- Core business metric definitions — revenue, churn, retention, engagement — agreed on across the company
 - Sustainability KPIs — carbon accounting, B Corp indicators, custom environmental metrics — built right alongside them
+- Data transformation encoded in a dbt data model that is version controlled, tested, and documented
 - A semantic data layer that makes metrics consistent across every tool your team uses
 - Dashboards that surface the numbers people actually trust and act on
 {% end %}

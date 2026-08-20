@@ -189,6 +189,39 @@
   .minichip.diff { border-color: #a8a49b; color: var(--ink); font-weight: 600; }
   #detail a { color: var(--link); word-break: break-all; }
 
+  /* methodology modal */
+  #method-link-header {
+    font-size: 12px; color: var(--ink-2); text-decoration: underline;
+    text-decoration-color: rgba(61,79,95,.4); text-underline-offset: 2px;
+    background: none; border: none; padding: 0; white-space: nowrap;
+  }
+  #method-link-sidebar {
+    display: block; width: 100%; text-align: left; background: none; border: none;
+    color: var(--link); font-size: 12.5px; padding: 0; margin: -4px 0 14px;
+  }
+  #method-modal {
+    position: fixed; inset: 0; z-index: 100; display: none;
+    background: rgba(30,30,30,.45); padding: 24px;
+  }
+  #method-modal.open { display: flex; align-items: flex-start; justify-content: center; }
+  #method-card {
+    background: var(--panel); border-radius: 14px; box-shadow: var(--shadow);
+    max-width: 640px; width: 100%; max-height: calc(100vh - 64px);
+    overflow-y: auto; padding: 22px 26px 26px; position: relative;
+    margin-top: 3vh;
+  }
+  #method-card h2 {
+    font-family: "Source Serif 4", Georgia, serif; font-size: 20px;
+    margin: 0 28px 10px 0; letter-spacing: 0; text-transform: none; color: var(--ink);
+  }
+  #method-card h3 { font-size: 14.5px; margin: 18px 0 6px; }
+  #method-card p { margin: 0 0 10px; font-size: 13.5px; line-height: 1.55; color: var(--ink); }
+  #method-close {
+    position: absolute; top: 12px; right: 12px; border: none; background: none;
+    font-size: 20px; line-height: 1; color: var(--ink-3); padding: 6px 8px; border-radius: 6px;
+  }
+  #method-close:hover { background: #f4f2ec; color: var(--ink); }
+
   .maplibregl-popup-content {
     font: 12px/1.35 system-ui, sans-serif; padding: 5px 9px; border-radius: 6px;
     box-shadow: var(--shadow); pointer-events: none;
@@ -225,6 +258,7 @@
   <span class="sub">Sustainability leaders and certified green businesses across Sonoma, Marin, Napa &amp; Mendocino counties · Aug 2026</span>
   <span id="internal-flag">Internal view</span>
   <span class="spacer"></span>
+  <button id="method-link-header" aria-haspopup="dialog">Methodology</button>
   <a class="brand-link" href="https://polycultureresearch.com" target="_blank" rel="noopener">Polyculture Research</a>
   <button id="filters-btn" aria-expanded="false" aria-controls="sidebar">Filters</button>
 </header>
@@ -233,6 +267,7 @@
   <aside id="sidebar" aria-label="Map filters">
     <p id="counts" role="status" aria-live="polite"></p>
     <button id="reset-all">Reset all filters</button>
+    <button id="method-link-sidebar" aria-haspopup="dialog">How businesses get on this map &rarr;</button>
 
     <div class="section" role="group" aria-label="Layers">
       <h2>Layers</h2>
@@ -246,6 +281,11 @@
       <div class="group-label">Region-standard &amp; other programs</div>
       <div class="chips" id="chips-std"></div>
       <button id="clear-certs">Clear certification filter</button>
+    </div>
+
+    <div class="section" role="group" aria-label="Ownership filter">
+      <h2>Ownership</h2>
+      <div class="chips" id="chips-ownership"></div>
     </div>
 
     <div class="section" role="group" aria-label="County filter">
@@ -276,6 +316,35 @@
       <button class="close" id="detail-close" aria-label="Close details">&#10005;</button>
       <div id="detail-body"></div>
     </section>
+  </div>
+</div>
+
+<div id="method-modal" role="dialog" aria-modal="true" aria-label="How businesses get on this map">
+  <div id="method-card">
+    <button id="method-close" aria-label="Close methodology">&#10005;</button>
+    <h2>How businesses get on this map</h2>
+    <p>Every business on this map is here because of something specific and checkable, not because we like them. But the <em>kind</em> of evidence differs, and pretending otherwise would be the easiest way to make a map like this worthless. So we label it.</p>
+<h3>The five kinds of evidence</h3>
+<p>These are ordered by how independent the evidence is from the business itself. That is not the same as how strong it is. A ranch running an independent ecological monitoring program is better evidenced than a company that bought an audit.</p>
+<p><strong>Third-party certified.</strong> An outside body assessed the business and can take the certification away. B Corp, Regenerative Organic Certified, Demeter Biodynamic, Climate Neutral, science-based targets validated by SBTi, LEED, Fair Trade, FSC, Sun+Earth, the California Green Business Network. Most of this map.</p>
+<p><strong>Measured outcomes.</strong> The business collects or publishes actual measurement of its environmental effect, ideally with a named independent partner. This is rarer than certification and, when it is real, it is better. Certification tells you a process was followed. Measurement tells you what happened.</p>
+<p><strong>Structural.</strong> The commitment is written into the ownership or a legal instrument, so it survives a change of management: worker cooperatives, ESOPs, benefit corporations, social purpose corporations, nonprofit ownership, conservation easements, land trusts, and land held by a conservation organization and farmed by an independent operator. Seventeen businesses on this map are structurally mission-locked, and most of them are also certified. We flag it separately because it is a different kind of durability: a certification can lapse when the person who championed it leaves, and a deed does not.</p>
+<p><strong>Documented practice.</strong> Specific operational facts the business states publicly and anyone can check: certified inputs, packaging, on-site energy, sourcing. No audit, but no ambiguity either.</p>
+<p><strong>Locally attested.</strong> A named person vouches for a practice that is real but not documented anywhere public yet. We say who is vouching and when. This is the weakest tier and we use it sparingly.</p>
+<h3>What it takes to get listed</h3>
+<p>One hard requirement: <strong>at least one fact a stranger could check without contacting us.</strong></p>
+<p>That means a URL that states the practice, a certification, a named partner organization, a legal ownership structure, or something observable in the business itself. &quot;We are committed to sustainability&quot; is not a fact. A page saying which farm the coffee comes from is.</p>
+<p>Beyond the floor, we ask three things:</p>
+<p><strong>Is it material?</strong> Compostable cups at a coffee shop are material. Compostable cups at a machine shop are decoration. The practice has to touch what the business actually does.</p>
+<p><strong>Is it specific?</strong> A number, a named certifier, a named supplier, a named partner. Specific claims can be wrong, which is what makes them worth something.</p>
+<p><strong>Is it current?</strong> Certifications lapse, companies get acquired, and sustainability programs leave with the executive who ran them. We check dates and we date our own entries.</p>
+<h3>What does not qualify</h3>
+<p>Having an ESG page. A sustainability section on the website with no specifics behind it. Awards the business gave itself. Membership in something with no assessment attached. In this region specifically, Certified California Sustainable Winegrowing is held by more than 1,100 entities and Napa Green by roughly a quarter of Napa&#x27;s wineries, so neither is on its own a sign of leadership. We record them, we just do not treat them as a differentiator.</p>
+<h3>Why certification is not the whole story</h3>
+<p>Certification costs money and staff time. Petaluma&#x27;s spring 2026 Green Business cohort was sixteen businesses in a city of sixty thousand, which tells you the binding constraint is administrative capacity, not commitment. Plenty of businesses here do the work and never document it, and a map that only counted certifications would systematically miss the smallest and newest of them.</p>
+<p>That gap, between what a business does and what it can show, is worth naming. It is also most of what makes environmental claims hard to trust in general.</p>
+<h3>Corrections</h3>
+<p>If something here is wrong, out of date, or missing, tell us. Records carry the date we last checked them.</p>
   </div>
 </div>
 
@@ -366,6 +435,7 @@ const EVIDENCE_LABEL = {
 /* ── state ────────────────────────────────────────── */
 const state = {
   leaders: true, green: true, farms: false, civic: false,
+  structural: false,
   certs: new Set(),
   counties: new Set(COUNTIES),
   buckets: new Set(BUCKETS.map(b => b.key)),
@@ -428,6 +498,7 @@ function initMap(style) {
     map.addSource('green',   { type: 'geojson', data: fc([]) });
     map.addSource('civic',   { type: 'geojson', data: fc([]) });
     map.addSource('leaders', { type: 'geojson', data: fc([]) });
+    map.addSource('structural-ring', { type: 'geojson', data: fc([]) });
     map.addSource('selected',{ type: 'geojson', data: fc([]) });
 
     map.addLayer({ id: 'dim', type: 'circle', source: 'dim', paint: {
@@ -457,6 +528,17 @@ function initMap(style) {
         6, tierRadius(0.5), 10, tierRadius(0.85), 13, tierRadius(1.25)],
       'circle-stroke-color': ['case', ['get', 'approx'], '#8f8b84', '#ffffff'],
       'circle-stroke-width': 1.5,
+    }});
+
+    const isLeader = ['==', ['get', 'layer'], 'client_scale_leader'];
+    map.addLayer({ id: 'structural-ring', type: 'circle', source: 'structural-ring', paint: {
+      'circle-color': 'rgba(0,0,0,0)',
+      'circle-stroke-color': '#3d4f5f',
+      'circle-stroke-width': 2,
+      'circle-radius': ['interpolate', ['linear'], ['zoom'],
+        6, ['case', isLeader, ['+', 3, tierRadius(0.5)], 4.7],
+        10, ['case', isLeader, ['+', 3, tierRadius(0.85)], 6.1],
+        13, ['case', isLeader, ['+', 3, tierRadius(1.25)], 8]],
     }});
 
     map.addLayer({ id: 'selected', type: 'circle', source: 'selected', paint: {
@@ -500,7 +582,8 @@ function applyFilters() {
     if (!layerOn || !state.counties.has(p.county) || !state.buckets.has(p.bucket)) continue;
     const certOk = state.certs.size === 0 ||
       (p.cert_programs || []).some(c => state.certs.has(c));
-    if (!certOk) { groups.dim.push(f); continue; }
+    const structuralOk = !state.structural || p.structural_mission;
+    if (!certOk || !structuralOk) { groups.dim.push(f); continue; }
     if (p.layer === 'client_scale_leader') groups.leaders.push(f);
     else if (p.layer === 'certified_organic_farm') groups.farms.push(f);
     else if (p.civic) groups.civic.push(f);
@@ -512,6 +595,9 @@ function applyFilters() {
     map.getSource('farms').setData(fc(groups.farms));
     map.getSource('civic').setData(fc(groups.civic));
     map.getSource('leaders').setData(fc(groups.leaders));
+    const visible = [...groups.leaders, ...groups.green, ...groups.farms, ...groups.civic];
+    map.getSource('structural-ring').setData(fc(
+      state.structural ? visible.filter(f => f.properties.structural_mission) : []));
     const sel = state.selected && byId[state.selected];
     const selVisible = sel && [...groups.leaders, ...groups.green, ...groups.farms, ...groups.civic].includes(sel);
     map.getSource('selected').setData(fc(selVisible ? [sel] : []));
@@ -519,7 +605,7 @@ function applyFilters() {
   const bits = [`<b>${groups.leaders.length}</b> at scale`, `<b>${groups.green.length}</b> local businesses`];
   if (state.farms) bits.push(`<b>${groups.farms.length}</b> organic farms`);
   if (state.civic) bits.push(`<b>${groups.civic.length}</b> civic`);
-  if (groups.dim.length) bits.push(`${groups.dim.length} dimmed by certification filter`);
+  if (groups.dim.length) bits.push(`${groups.dim.length} dimmed by active filters`);
   document.getElementById('counts').innerHTML = 'Showing ' + bits.join(' · ');
   updateLegendCounts(groups);
 }
@@ -589,6 +675,15 @@ document.getElementById('clear-certs').addEventListener('click', () => {
   applyFilters();
 });
 
+/* ── UI: ownership overlay chip ───────────────────── */
+const structuralCount = PUB.filter(f => f.properties.structural_mission).length;
+const structuralChip = makeChip('Mission locked into ownership', structuralCount, 'diff', on => {
+  state.structural = on;
+  applyFilters();
+});
+structuralChip.title = 'Worker co-ops, ESOPs, benefit and social purpose corporations, nonprofit ownership, conservation easements — commitments that survive a change of management.';
+document.getElementById('chips-ownership').append(structuralChip);
+
 /* ── UI: county chips ─────────────────────────────── */
 const countyChipEls = {};
 for (const c of COUNTIES) {
@@ -656,6 +751,8 @@ function openDetail(id) {
     badges.push('<span class="badge cross">Also a certified CA Green Business</span>');
   if (!isL1 && p.also_client_scale)
     badges.push('<span class="badge cross">Also a client-scale leader</span>');
+  if (p.structural_mission)
+    badges.push('<span class="badge" style="background:#e4e9ee;color:#3d4f5f">Mission locked into ownership</span>');
   if (p.mobileService)
     badges.push('<span class="badge warn">Mobile service — location is nominal</span>');
   else if (p.approx)
@@ -733,6 +830,8 @@ document.getElementById('zoom-region').addEventListener('click', () =>
 
 document.getElementById('reset-all').addEventListener('click', () => {
   state.leaders = true; state.green = true; state.farms = false; state.civic = false;
+  state.structural = false;
+  structuralChip.setAttribute('aria-pressed', 'false');
   state.certs.clear();
   state.counties = new Set(COUNTIES);
   state.buckets = new Set(BUCKETS.map(b => b.key));
@@ -747,6 +846,19 @@ document.getElementById('reset-all').addEventListener('click', () => {
   closeDetail();
   applyFilters();
 });
+
+/* ── methodology modal ────────────────────────────── */
+const methodModal = document.getElementById('method-modal');
+function openMethod() {
+  methodModal.classList.add('open');
+  document.getElementById('method-close').focus({ preventScroll: true });
+}
+function closeMethod() { methodModal.classList.remove('open'); }
+document.getElementById('method-link-header').addEventListener('click', openMethod);
+document.getElementById('method-link-sidebar').addEventListener('click', openMethod);
+document.getElementById('method-close').addEventListener('click', closeMethod);
+methodModal.addEventListener('click', e => { if (e.target === methodModal) closeMethod(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMethod(); });
 
 document.getElementById('filters-btn').addEventListener('click', () => {
   const sb = document.getElementById('sidebar');
